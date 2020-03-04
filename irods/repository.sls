@@ -4,7 +4,7 @@
 
 renci-irods:
   pkgrepo.managed:
-    - name: RENCI iRODS Repository
+    - humanname: RENCI iRODS Repository
     - baseurl: https://packages.irods.org/yum/pool/centos$releasever/$basearch
     - enabled: True
     - gpgcheck: 1
