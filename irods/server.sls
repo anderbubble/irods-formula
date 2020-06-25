@@ -6,6 +6,13 @@ include:
 irods-server:
   pkg.installed
 
+{% if salt['pillar.get']('irods:database_plugin') %}
+irods-database-plugin:
+  pkg:
+    - installed
+    - name: irods-database-plugin-{{ pillar['irods']['database_plugin'] }}
+{% endif %}
+
 /usr/local/etc/irods:
   file.directory:
     - user: root
